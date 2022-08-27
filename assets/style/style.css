@@ -1,0 +1,100 @@
+.btn-orange {
+    background-color: orangered;
+
+}
+.group-button button a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar{
+    height: max-content;
+}
+.form-container{
+    height: auto;
+}
+
+.form-container form{
+    width: 550px;
+    height: auto;
+}
+label{
+    font-weight: bold;
+}
+a .navactive{
+    color:brown;
+}
+
+.icon{
+    width: 30;
+    height: 30;
+}
+
+.card-image img{
+    width: 300px;
+    height:300px;
+}
+
+
+.myproject{
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+}
+
+.myproject h1{
+    text-align: center;
+}
+
+
+.project-list{
+	display:flex;
+	height:auto;
+	flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    width: 1000px;
+    
+}
+
+.project-list-item{
+	border:solid 1 px;
+	background-color:graydark;
+	width:290px;
+	border-radius:10px;	
+	border:solid 5px;
+	margin: 10px;
+	height:fit-content;
+	overflow:hidden;
+}
+
+.project-list-item .project-image img{
+	width:200px;
+	height:200px;
+}
+
+.project-list-item .project-content .description {
+	margin-top:10px;
+	text-align:justify;
+}
+
+.project-list-item .project-content .group-button {
+	display:flex;
+}
+
+.project-list .project-list-item .project-content .duration {
+    font-size: 12px;
+}
+
+
+.project-list-item .project-content .group-button button{
+	background-color:gray;
+	color:white;
+	font-size:15px;
+	width:50%;
+}
+
+
+
+/* ==== Akhir Myprojectlist ==== */

@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Learning Bootstrap </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+        ">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+        "></script>
+        <link rel="stylesheet" href="../assets/style/style.css"/>
+        <link rel="stylesheet" href="../assets/style/projectlist.css">
+    </head>
+    <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <!--Left Side-->
+              <a class="navbar-brand" href="/">
+                <img src="../assets/img/logo.png" alt="logo-dumbways">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active nav-item-active" href="/">Home</a>
+                  </li>
+                  {{#if isLogin}}
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="/add-Project">Addproject</a>
+                  </li>
+                  {{/if}}
+                </ul>
+                <!--End Left Side-->
+
+                <!--Right Side-->
+                <a href="/contact" class="btn btn-danger ">Contact Me</a>
+                <!--End Right Side-->
+              </div>
+            </div>
+      </nav>
+      <!--End Navbar-->
+
+      <!--Card-->
+      
+      <div class="d-flex justify-content-centercontainer m-5 bg-danger pt-5  ">
+        <div class="ms-5">
+          
+          <h1>Hi Welcome to my hut</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas eaque laborum temporibus voluptatem ipsa iusto, laudantium, voluptates est consectetur repudiandae sunt fuga magnam possimus, similique quis dolore autem doloribus obcaecati reiciendis provident cupiditate magni voluptatibus harum perspiciatis. Accusamus porro neque ratione magnam harum natus ab consectetur? Quod temporibus nobis obcaecati dolores nisi molestias quaerat reprehenderit tempore, sapiente ratione neque ea voluptas adipisci ipsa suscipit quam illum nesciunt perferendis? Unde eligendi optio iste nemo beatae corporis hic omnis laboriosam suscipit fuga incidunt, officiis totam provident odio voluptates molestiae sequi quaerat a velit, rem delectus, quam eum. Non doloribus voluptas itaque veritatis.
+          </p>
+          <div class="md-3">
+            <a href="/contact" class="btn bg-dark text-white">Contact</a> <a href="../assets/img/CV-Amirul.pdf" download class="text-dark fw-bold text-decoration-none"> Download CV  <img src="./assets/img/download.png" alt=""></a>
+          </div>
+           <!-- Create div for icon-->
+          <div >
+            <div class="sosmed-wrapper d-flex text-white ms-3 mt-3 mb-3">
+                <div class="icon bg-dark text-white me-3 p-2 justify-content-center align-items-center rounded-circle d-flex ">
+                    <a href="https://www.linkedin.com/in/amirul-haqim-b63523163" class="text-white"  target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="icon bg-dark text-white me-3 p-2 justify-content-center align-items-center rounded-circle d-flex ">
+                    <a href="https://instagram.com/amirul281000?igshid=YmMyMTA2M2Y=" target="_blank" class="text-white" >
+                        <i class="fa-brands fa-instagram "></i>
+                    </a>
+                </div>
+                <div class="icon bg-dark text-white me-3 p-2 justify-content-center align-items-center rounded-circle d-flex ">
+                    <a href="https://www.facebook.com/AmirulHaqim28" class="text-white" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+                <div class="icon bg-dark text-white me-3 p-2 justify-content-center align-items-center rounded-circle d-flex ">
+                    <a href="https:www.twitter.com/amirul281000" class="text-white" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <!--End Icon-->
+        </div>
+        <div class="justify-content-center d-flex  m-auto" >
+          <div class="card-image w-auto border h-auto bg-white m-auto me-5 mb-5">
+            <img src="../assets/img/profil.png"  alt="">
+            <h4 class="d-flex justify-content-center">M. Amirul Haqim</h4>
+            <p  class="d-flex justify-content-center">Fulstack Developer</p>
+        </div>
+        </div>
+      </div>
+      <!--End Card-->
+     
+    
+      <div class="myproject">
+						<h1>My Project</h1>
+						<div id="contents" class="project-list">
+							<!-- dynamic content would be here -->
+              {{#each project}}
+              
+              <div class= "project-list-item">
+                  <div class="project-image">
+                    <img src="/assets/img/astronaut.jpg" alt=""/>
+                  </div>
+                  <div class="project-content">
+                    <div class="name-project">
+                      <h1><a href="/project-detail/{{@index}}">{{this.projectName}}</a></h1>
+                                </div>
+                    <div class="duration">
+                      <h5>durasi : {{this.duration}}</h>
+                    </div>
+                    <div class="description">
+                      <div class="desc2"><p>{{this.description}}</p></div>
+                    </div>
+                    <div class="techno" id="technos">
+                            <i class="fa-brands fa-node"></i> <i class="fa-brands fa-next"></i>
+                    </i> <i class="fa-brands fa-react"></i><i class="fa-brands fa-ts"></i>
+                    </div>
+                    {{#if isLogin}}
+                    <div class="group-button">
+
+                      <button class="btn-edit"><a href="/update-project/{{@index}}">Edit</a></button>
+                      <button class="btn-delete"><a href="/delete-project/{{@index}}">Delete</a></button>
+                    </div>
+                    {{/if}}
+                </div>
+              </div>
+
+              {{/each}}
+      </div>
+		
+
+    
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+     <head>
+        <title>Learning Bootstrap </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+        ">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+        "></script>
+        <link rel="stylesheet" href="../assets/style/style.css"/>
+        <link rel="stylesheet" href="../assets/style/detailProject.css">
+    </head>
+    <body>
+     
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <!--Left Side-->
+              <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo.png" alt="logo-dumbways">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="/add-project">Add project</a>
+                  </li>
+                  
+                </ul>
+                <!--End Left Side-->
+
+                <!--Right Side-->
+                <a href="/contact" class="btn btn-danger">Contact Me</a>
+                <!--End Right Side-->
+              </div>
+            </div>
+        </nav>
+        <!--End Navbar--> <div class="detail-container">
+            <h1>{{data.projectName}}</h1>
+            <div class="content">
+                <img src="../assets/img/astronaut.jpg" alt="">
+                <div class="right">
+                    <div class="durationdetail">
+                        <h4>Duration</h4>
+                        <span class="startend"><i class="fas fa-calendar"></i>  {{data.startDate}} - {{data.endDate}}</span>
+                        <br>
+                        <span class="durationmonth"> <i class="far fa-clock"></i>  {{data.duration}}</span>
+                    </div>
+                    <div class="technodetail">
+                        <h4>Technologies</h4>
+                        <i class="fa-brands fa-react"></i>React Js 
+                        <i class="fa-brands fa-js"></i>JavaScript
+                        <br>
+                        <i class="fa-brands fa-node"></i>Node Js
+                        <i class="fa-brands fa-socket"></i>Socket IO
+                    </div>
+                </div>
+                
+            
+            
+            </div>
+            <p>{{data.description}}</p>
+        </div>    
+    </body>
+</html>
